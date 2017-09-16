@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NSNotification &amp; KVO.xcscheme</key>
+		<key>NSNotification Center &amp; KVO.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DAB9CB961F6DC12A0042B076</key>
+		<key>DAB9CBB91F6DC4190042B076</key>
 		<dict>
 			<key>primary</key>
 			<true/>

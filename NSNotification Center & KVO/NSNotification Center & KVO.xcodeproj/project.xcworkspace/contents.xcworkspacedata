@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NSNotification &amp; KVO.xcodeproj">
+      location = "self:NSNotification Center &amp; KVO.xcodeproj">
    </FileRef>
 </Workspace>
