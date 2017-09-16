@@ -27,14 +27,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="X5u-cf-gBT">
+                                <rect key="frame" x="140" y="319" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperTpped:" destination="9pv-A4-QxB" eventType="valueChanged" id="I3u-yS-IQB"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71529921668278862" blue="0.23378071202441297" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="X5u-cf-gBT" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="0Ew-8b-jl0"/>
                             <constraint firstItem="ltL-1U-QBT" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="2h7-iq-QWv"/>
                             <constraint firstItem="ltL-1U-QBT" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-288" id="Ksi-ys-ofg"/>
+                            <constraint firstItem="X5u-cf-gBT" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Y3G-fE-JM7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="stepper" destination="X5u-cf-gBT" id="rh6-g5-0Ud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,9 +62,32 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbH-X9-XLD">
+                                <rect key="frame" x="152" y="28" width="71" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESK-c8-9Xt">
+                                <rect key="frame" x="148" y="316" width="79" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.95617194879296052" green="1" blue="0.088734960616180136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NbH-X9-XLD" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-288" id="3lu-0O-tQ6"/>
+                            <constraint firstItem="ESK-c8-9Xt" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="APY-zc-CvX"/>
+                            <constraint firstItem="ESK-c8-9Xt" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="U29-lr-oh2"/>
+                            <constraint firstItem="NbH-X9-XLD" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="fg7-5x-MmI"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="countLabel" destination="ESK-c8-9Xt" id="yl0-cd-bdb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
