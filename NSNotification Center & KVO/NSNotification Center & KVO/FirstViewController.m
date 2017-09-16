@@ -17,28 +17,27 @@
 
 @implementation FirstViewController
 
+-(void)viewDidLoad{
+
+
+    
+}
+
 - (IBAction)stepperTpped:(UIStepper *)sender {
     
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     
+    NSDictionary *dictionary = [[NSDictionary alloc]initWithObjectsAndKeys: @"stepperValue",@(self.stepper.value), nil];
     
-    NSDictionary *dictionary = [[NSDictionary alloc]initWithObjectsAndKeys: notificationCenter,@(self.stepper.value), nil];
-    
-    NSNotification *notification = [[NSNotification alloc]initWithName:@"countStep" object:self.stepper userInfo:dictionary];
+    NSNotification *notification = [[NSNotification alloc]initWithName:@"stepperValue" object:self.stepper userInfo:dictionary];
     
 
+    [notificationCenter postNotification:notification];
     
-    
-    /* 
-Now post the notification using NSNotificationCenter's method - (void)postNotification:(NSNotification *)notification;. You can see that this is an instance method. It is called on the NSNotificationCenter's instance. You pass it the NSNotification you created.
-     
-     */
--(void)postNotification:(NSNotification*)notification{
-    
-    
-    }
-    
+
 }
+
+
 
 
 
