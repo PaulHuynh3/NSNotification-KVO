@@ -11,7 +11,6 @@
 
 @interface SecondViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
-@property (nonatomic) FirstViewController* firstViewController;
 
 @end
 
@@ -19,9 +18,9 @@
 
 -(void)viewDidLoad{
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-     [notificationCenter addObserver:self selector:@selector(notificationHandler:) name:@"steps" object:nil];
     
-    self.firstViewController = [[FirstViewController alloc]init];
+     [notificationCenter addObserver:self selector:@selector(notificationHandler:) name:@"notificationStep" object:nil];
+    
 }
 
 
@@ -41,8 +40,8 @@
     
 }
 
--(void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+//-(void)dealloc {
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//}
 
 @end

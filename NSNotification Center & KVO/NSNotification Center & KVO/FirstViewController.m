@@ -18,16 +18,21 @@
 
 
 -(void)viewDidLoad{
-
 }
 
 
 
 - (IBAction)stepperTpped:(UIStepper *)sender {
-    self.dictionary = [[NSDictionary alloc]initWithObjectsAndKeys: @"stepperValue",@(self.stepper.value), nil];
+    
+    
+//    NSDictionary *dictionary = [[NSDictionary alloc]initWithObjectsAndKeys: @"stepperValue",@(self.stepper.value), nil];
+    
+    //use this dictionary method instead of the above.. the above return null.
+    NSDictionary *dictionary = @{@"stepperValue": @(self.stepper.value)};
     
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    NSNotification *notification = [[NSNotification alloc]initWithName:@"steps" object:self userInfo:self.dictionary];
+    
+    NSNotification *notification = [[NSNotification alloc]initWithName:@"notificationStep" object:self userInfo:dictionary];
     
     [notificationCenter postNotification:notification];
     
